@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed=100;
+    public float speed=100;
     private Rigidbody playerRb;
     private float horizontalInput;
     private float verticalInput;
     private float bound = 15;
-    private float a = 1;
+    private float a = 10;
     
     // Start is called before the first frame update
     void Start()
