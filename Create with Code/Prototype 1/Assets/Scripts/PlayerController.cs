@@ -6,16 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     private float forwardInput;
     private float horizontalInput;
-    private float turnSpeed=45f;
-    private float speed = 20f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    [SerializeField] float turnSpeed=45f;
+    [SerializeField] float speed = 20f;
+    
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Move the vehicle forward based on  vertical input
         transform.Translate(Vector3.forward*Time.deltaTime*speed*forwardInput);
