@@ -654,31 +654,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2007674985}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2075316107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075316106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af4dd5038685c842a5aeefbafa9d542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalInput: 0
-  speed: 10
-  xRange: 20
-  projectilePrefab: {fileID: 5363317606265312237, guid: 798d62a9d78627b46aee853c31900bf6,
-    type: 3}
 --- !u!114 &2075316110
 MonoBehaviour:
   m_ObjectHideFlags: 0
