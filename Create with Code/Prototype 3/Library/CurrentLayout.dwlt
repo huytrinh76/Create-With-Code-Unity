@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 117
+  controlID: 114
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 673
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -462,9 +462,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 560f0000
-      m_LastClickedID: 3926
-      m_ExpandedIDs: defbffff560f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: a2f3ffffc4f3ffff0cf5ffff06f9ffffeaf9ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -605,20 +605,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Challenge 3/Sound
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Challenge 3/Sound
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Code\Create-with-Code-Unity\Prototype 3
+  m_LastProjectPath: D:\Code\Create-With-Code-Unity\Create with Code\Prototype 3
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ea0c0000
-    m_LastClickedID: 3306
-    m_ExpandedIDs: 00000000380a0000540b0000720b0000700c0000640d0000c80d0000200e000000ca9a3b
+    scrollPos: {x: 0, y: 227}
+    m_SelectedIDs: 16290000
+    m_LastClickedID: 10518
+    m_ExpandedIDs: 000000005e2700007a28000098280000962900008a2a0000ee2a0000462b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +646,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000380a0000540b0000720b0000700c0000640d0000c80d0000200e0000
+    m_ExpandedIDs: 000000005e2700007a28000098280000962900008a2a0000ee2a0000462b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
