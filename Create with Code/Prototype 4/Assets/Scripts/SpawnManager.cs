@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerupPrefab;
     public Button restartButton;
     public TextMeshProUGUI gameOverText;
+    public Button exitButton;
     public bool isGameActive;
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,6 @@ public class SpawnManager : MonoBehaviour
         }
         
     }
-
     void Update()
     {
         if (isGameActive)
@@ -59,9 +59,15 @@ public class SpawnManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
         restartButton.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
     }
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting!");
     }
 }
