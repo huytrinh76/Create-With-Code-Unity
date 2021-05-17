@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
@@ -9,10 +11,13 @@ public class SpawnManager : MonoBehaviour
     private int enemyCount;
     private int waveNumber = 1;
     public GameObject powerupPrefab;
-    
+    public Button restartButton;
+    public TextMeshProUGUI gameOverText;
+    public bool isGameActive;
     // Start is called before the first frame update
     void Start()
     {
+        isGameActive = true;
         SpawnEnemyWave(waveNumber);
         Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
     }
@@ -25,20 +30,38 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnEnemyWave(int enemiesToSpawn)
     {
-        for (int i = 0; i < enemiesToSpawn; i++)
-           {
-               Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-           }
+        if(isGameActive)
+        {
+            for (int i = 0; i < enemiesToSpawn; i++)
+            {
+                Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
+            }
+        }
+        
     }
 
     void Update()
     {
-        enemyCount = FindObjectsOfType<Enemy>().Length;
-        if (enemyCount == 0)
+        if (isGameActive)
         {
-            waveNumber++;
-            SpawnEnemyWave(waveNumber);
-            Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+            enemyCount = FindObjectsOfType<Enemy>().Length;
+            if (enemyCount == 0)
+            {
+                waveNumber++;
+                SpawnEnemyWave(waveNumber);
+
+                Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation);
+            }
         }
+    }
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        isGameActive = false;
+        restartButton.gameObject.SetActive(true);
+    }
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
