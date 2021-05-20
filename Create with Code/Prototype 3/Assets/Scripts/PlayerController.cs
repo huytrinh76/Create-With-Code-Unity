@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dirtParticle;
     public AudioClip jumpSound;
     public AudioClip crashSound;
+    public AudioClip marioSound;
     private AudioSource playerAudio;
+    public SpawnManager spawnManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
             dirtParticle.Play();
         }
-        else if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             gameOver = true;
             Debug.Log("Game Over!");
@@ -50,6 +52,9 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
             dirtParticle.Stop();
             playerAudio.PlayOneShot(crashSound, 1.0f);
+            spawnManager.GameOver();
+            playerAudio.PlayOneShot(marioSound, 1f);
+            GameObject.Find("Main Camera").GetComponent<AudioSource>().Stop();
         }
     }
 }
