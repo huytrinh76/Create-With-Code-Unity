@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     public Button restartButton;
     public GameObject titleScreen;
+    public Button exitButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +25,17 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
         restartButton.gameObject.SetActive(true);
+        exitButton.gameObject.SetActive(true);
     }
     // Update is called once per frame
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is exiting!");
     }
     IEnumerator SpawnTarget()
     {
